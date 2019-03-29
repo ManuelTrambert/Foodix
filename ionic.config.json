@@ -1,8 +1,7 @@
 {
-  "name": "projetLoulou",
-  "app_id": "",
-  "type": "ionic-angular",
+  "name": "RecipeHelper",
   "integrations": {
     "cordova": {}
-  }
+  },
+  "type": "angular"
 }
