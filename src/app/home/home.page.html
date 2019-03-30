@@ -10,7 +10,7 @@
     </ion-row>
     <ion-item>
       <ion-range pin="true" color="secondary" min="1" max="500"></ion-range>
-      <ion-icon name="cog" [style.color]="'#3CB58B'"></ion-icon>
+      <ion-icon (click)="redirectSettings()" name="cog" [style.color]="'#3CB58B'"></ion-icon>
     </ion-item>
     <ion-row>
       <div class="thumnails">
@@ -48,8 +48,8 @@
               <ion-card-subtitle>{{recipe.time}} min</ion-card-subtitle>
               <ion-card-subtitle>{{recipe.price}}</ion-card-subtitle>
               <ion-card-content *ngIf="recipe.expand">{{recipe.description}}</ion-card-content>
-              <div style="z-index: 10" *ngIf="recipe.expand">
-                <ion-button fill="outline" size="small" style="color: #3CB58B;" color="white" href="/tab2">Lire la suite
+              <div style="z-index: 10" *ngIf="recipe.expand" (click)="redirect(recipe)">
+                <ion-button fill="outline" size="small" style="color: #3CB58B;" color="white">Lire la suite
                 </ion-button>
               </div>
             </ion-card-header>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -43,6 +44,7 @@ export class HomePage {
 
   recipes = [
     {
+      id: 0,
       'name': 'Andouillette',
       'type': 'Francaise',
       'path': 'assets/food/russian.jpeg',
@@ -53,6 +55,7 @@ export class HomePage {
       isFav: false
     },
     {
+      id: 1,
       'name': 'Coquillette',
       'type': 'Italienne',
       'path': 'assets/food/russian.jpeg',
@@ -63,6 +66,7 @@ export class HomePage {
       isFav: false
     },
     {
+      id: 2,
       'name': 'Caviar',
       'type': 'Russe',
       'path': 'assets/food/russian.jpeg',
@@ -73,6 +77,7 @@ export class HomePage {
       isFav: true
     },
     {
+      id: 3,
       'name': 'Lasagne',
       'type': 'Italienne',
       'path': 'assets/food/russian.jpeg',
@@ -83,6 +88,7 @@ export class HomePage {
       isFav: true
     },
     {
+      id: 4,
       'name': 'Burger',
       'type': 'Americaine',
       'path': 'assets/food/russian.jpeg',
@@ -93,6 +99,7 @@ export class HomePage {
       isFav: false
     },
     {
+      id: 5,
       'name': 'Couscous',
       'type': 'Marocaine',
       'path': 'assets/food/russian.jpeg',
@@ -103,6 +110,7 @@ export class HomePage {
       isFav: true
     },
     {
+      id: 6,
       'name': 'Tacos',
       'type': 'Chilienne',
       'path': 'assets/food/russian.jpeg',
@@ -114,7 +122,7 @@ export class HomePage {
     },
   ]
 
-  constructor() {
+  constructor(private router: Router) {
   }
 
   expand(recipe) {
@@ -123,5 +131,13 @@ export class HomePage {
 
   fav(recipe) {
     recipe.isFav = !recipe.isFav;
+  }
+
+  redirect(recipe) {
+    this.router.navigate([`recipe/${recipe.id}`]);
+  }
+
+  redirectSettings() {
+    this.router.navigate([`settings`]);
   }
 }

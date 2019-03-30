@@ -1,0 +1,62 @@
+<ion-content>
+    <ion-grid style="margin-top:30px;">
+        <ion-row>
+            <ion-col>
+                <ion-button (click)="goHome()" fill="outline" size="small" style="color: #3CB58B;" color="white">
+                    Retour
+                </ion-button>
+            </ion-col>
+        </ion-row>
+        <ion-row style="margin-top: 20px;">
+            <ion-col>
+                <ion-icon style="transform: scale(2); margin-left:15px;" name="cog" [style.color]="'#3CB58B'">
+                </ion-icon>
+                <ion-title style="padding-left: 30px;">Préférence de la recherche</ion-title>
+            </ion-col>
+        </ion-row>
+        <ion-row style="margin-top: 20px;">
+            <ion-col>
+                <ion-label style="margin-left: 10px;">
+                    Temps de préparation
+                </ion-label>
+            </ion-col>
+        </ion-row>
+        <ion-item>
+            <ion-range pin="true" color="secondary" min="1" max="500"></ion-range>
+        </ion-item>
+        <ion-row style="margin-top: 20px;">
+            <ion-col>
+                <ion-label style="margin-left: 10px;">
+                    Budget
+                </ion-label>
+            </ion-col>
+        </ion-row>
+        <ion-item>
+            <ion-range pin="true" color="secondary" min="1" max="500"></ion-range>
+        </ion-item>
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                    <ion-checkbox color="primary"></ion-checkbox>
+                    <ion-label>Sans gluten</ion-label>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                    <ion-checkbox color="primary"></ion-checkbox>
+                    <ion-label>Végétarien</ion-label>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                    <ion-checkbox color="primary"></ion-checkbox>
+                    <ion-label>Végan :'(</ion-label>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

@@ -45,6 +45,16 @@ const routes: Routes = [
     path: '',
     redirectTo: '/tabs/home',
     pathMatch: 'full'
+  },
+  {
+    path: 'recipe/:id',
+    loadChildren: '../recipe/detail.module#RecipeDetailModule',
+    pathMatch: 'full'
+  },
+  {
+    path: 'settings',
+    loadChildren: '../settings/settings.module#SettingsModule',
+    pathMatch: 'full'
   }
 ];
 

@@ -1,0 +1,82 @@
+<ion-content>
+    <ion-grid style="margin-top: 30px;">
+        <ion-row>
+            <ion-col>
+                <ion-button (click)="goHome()" fill="outline" size="small" style="color: #3CB58B;" color="white">
+                    Retour
+                </ion-button>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-title style="color: #3CB58B;">Foie gras poilé</ion-title>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-card>
+                    <ion-img style="overflow: hidden; border-radius: 10%; z-index: 9"
+                        [src]="'assets/food/corsican.jpeg'">
+                    </ion-img>
+                    <ion-icon (click)="fav()" *ngIf="!isFav"
+                        style="position:absolute; top: 30px; left: 30px; width: 15px; height: 15px;transform: scale(2); z-index: 10;"
+                        [style.color]="'#3CB58B'" name="heart-empty"></ion-icon>
+                    <ion-icon (click)="fav()" *ngIf="isFav"
+                        style="position:absolute; top: 30px; left: 30px; width: 15px; height: 15px;transform: scale(2); z-index: 10;"
+                        [style.color]="'#3CB58B'" name="heart"></ion-icon>
+                    <ion-icon
+                        style="position:absolute; right: 30px; top: 30px; width: 15px; height: 15px;transform: scale(2); z-index: 10;"
+                        [style.color]="'#3CB58B'" name="share-alt"></ion-icon>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-text>
+                    <h2 style="color: #3CB58B;">
+                        Ingrédient
+                    </h2>
+                </ion-text>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <p>
+                    2g de sirop de fief ur<br />
+                    30g de beurre <br />
+                    1 cuir. à soupe de verge <br />
+                </p>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-text>
+                    <h2 style="color: #3CB58B;">
+                        Recette
+                    </h2>
+                </ion-text>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <p>
+                    - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at quam eleifend, vehicula elit non,
+                    elementum diam. Duis eros massa, ultrices sed lorem vel, lobortis facilisis diam. Nunc congue purus
+                    posuere tellus consectetur, in tincidunt erat venenatis. Nam blandit dolor at sagittis ullamcorper.
+                    Suspendisse et lobortis magna, in consequat enim. Vivamus felis sapien, pharetra ac molestie ut,
+                    vestibulum et orci. Nullam efficitur euismod est a finibus. Interdum et malesuada fames ac ante
+                    ipsum primis in faucibus. Aliquam at auctor ipsum. Quisque vehicula ultricies ex non iaculis. Nulla
+                    vitae lacus dictum, cursus urna nec, tincidunt mi. Nam ante nibh, lobortis sed tempus quis,
+                    vestibulum ac enim. Mauris pulvinar, diam vel ultricies euismod, libero massa gravida quam, eget
+                    hendrerit velit ante sit amet ante.<br /><br />
+
+                    - Phasellus laoreet nisi ultrices ex tempor, faucibus porta velit ultrices. Suspendisse at urna
+                    pharetra ligula aliquet elementum a vehicula purus. Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Suspendisse eget arcu eget tellus tempus sodales. Vivamus at elementum erat. Etiam
+                    ut vulputate magna. Nam dictum viverra quam ut varius. Aliquam maximus pellentesque diam at
+                    ultricies.
+                </p>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
